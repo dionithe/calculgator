@@ -27,8 +27,11 @@ app.get('/', (req, res, next) => {
     res.render('index.ejs');
 });
 
+app.get('/pagejoueurs', (req, res, next) => {
+    res.render('pagejoueurs.ejs');
+}); 
 
+app.post('/pagejoueurs', (req, res, next) => {
+    console.log(req.body.name); 
+}); 
 
-app.use((req, res, next)=>{
-    res.status(404).render('error.ejs');
-});

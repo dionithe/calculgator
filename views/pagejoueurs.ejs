@@ -1,0 +1,11 @@
+<%- include ('header'); %>
+
+<h1> Inscription des joueurs : </h1>
+<div class="row">
+    <div class="col text-center">
+        <form action="/pagejoueurs" method="post">
+        <input typr="text" id="name" name="name" required minlength="1" maxlength="30" size="10" placeholder="Joueur">
+    </div>
+</div>
+
+<%- include ('footer'); %>
