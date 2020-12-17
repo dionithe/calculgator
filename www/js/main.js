@@ -67,7 +67,7 @@ function lancerCalcul(joueur){
 
 		console.log(tempsTimer);
 		if ($("#champReponse").val() == calcul.reponse && tempsTimer > 0){
-			joueur.ajouterScore(10);
+			joueur.ajouterScore(Math.round(tempsTimer));
 			$("#resultat").text("Bon !");
 		} else {
 			$("#resultat").text("Faux !");
