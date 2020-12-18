@@ -26,6 +26,9 @@ app.use(bodyparser.json());
 app.get('/', (req, res, next) => {
     res.render('index.ejs');
 });
+app.post('/', (req, res, next) => {
+    res.render('index.ejs');
+});
 
 
 

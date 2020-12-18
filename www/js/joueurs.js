@@ -4,7 +4,15 @@ class Joueur {
       this.score = 0;
     }
 
-    ajouterScore(points){
+    ajouterScore(tempsTimer){
+        let points = 0;
+        if (tempsTimer >= 10) {
+            points = 10;
+        } else if(tempsTimer >= 5) {
+            points = 5;
+        } else {
+            points = 3;
+        }
         this.score += points;
     }
 
