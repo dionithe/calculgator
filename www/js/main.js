@@ -64,6 +64,7 @@ function lancerCalcul(joueur){
 		clearTimeout(timerSuivant);
 	  }
 
+	$("#tour").text(`Tour n° ${6 - nbTours} !`);
 	$("#currentJoueur").text(`À vous de jouer ${joueur.nom} !`);
 	let calcul = nouveauCalcul();
 
@@ -99,6 +100,12 @@ function joueurSuivant(joueurActuel){
 					console.log(`Joueur suivant : ${listeJoueurs[parseInt(key) + 1].nom}`);
 					return listeJoueurs[parseInt(key) + 1];
 				} else { //fin du tour
+					if (nbTours > 1){
+						nbTours --;
+					}
+					else{
+						finDeLaPartie();
+					}
 					console.log(`Tour suivant !`)
 					console.log(`Joueur actuel : ${listeJoueurs[key].nom}`);
 					console.log(`Joueur suivant : ${listeJoueurs[0].nom}`);
@@ -138,6 +145,7 @@ function validerResultat(joueur, calcul){
 
 
 let tempsTimer = 15;
+let nbTours = 5;
 ajouterJoueur("Lulu");
 ajouterJoueur("Nathan");
 ajouterJoueur("Valentin");
