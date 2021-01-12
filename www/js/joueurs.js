@@ -2,6 +2,7 @@ class Joueur {
     constructor(nom) {
       this.nom = nom;
       this.score = 0;
+      this.position = 'nc';
     }
 
     ajouterScore(tempsTimer){
@@ -19,6 +20,13 @@ class Joueur {
 
     obtenirScore(){
         return this.score
+    }
+
+    definirPosition(position){
+        this.position = position;
+    }
+    obtenirPosition(){
+        return this.position
     }
 
 }
