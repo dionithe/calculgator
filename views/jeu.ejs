@@ -1,0 +1,27 @@
+<%- include('header.ejs'); %>
+<p>INDEX</p>
+
+	<div class="container">
+		<div class="row" id="tour"></div>
+		<div class="row" id="currentJoueur"></div>
+		<div class="row">
+			<p id="champCalcul"></p>
+			<input type="text" id="champReponse" placeholder="?" />
+			<button type="button" class="btn btn-primary" id="boutonValider">Valider</button>
+			<p id="resultat">...</p>
+			<p id="timer">...</p>
+		</div>
+
+		<div class="row col-12 m-5" id="podium">
+
+			<div class="row col-12 flex-line" id="titles">
+				<div class="col-3">Position</div>
+				<div class="col-6">Nom</div>
+				<div class="col-3">Score</div>
+			</div>
+
+			<div class="row col-12" id="listeJoueurs"></div>
+
+		</div>
+	</div>
+<%- include('footer.ejs'); %>

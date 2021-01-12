@@ -26,6 +26,13 @@ app.use(bodyparser.json());
 app.get('/', (req, res, next) => {
     res.render('index.ejs');
 });
+app.post('/', (req, res, next) => {
+    res.render('index.ejs');
+});
+
+app.get('/jeu', (req, res, next) => {
+    res.render('jeu.ejs');
+});
 
 app.get('/pagejoueurs', (req, res, next) => {
     res.render('pagejoueurs.ejs');
