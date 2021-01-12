@@ -14,10 +14,17 @@ class Joueur {
             points = 3;
         }
         this.score += points;
+        console.log(`${this.nom} vient d'obtenir ${points} points, ce qui lui fait un total de ${this.score} points !`);
     }
 
     obtenirScore(){
         return this.score
     }
 
+}
+
+
+let listeJoueurs = [];
+function ajouterJoueur(nom){
+    listeJoueurs[listeJoueurs.length] = new Joueur(nom);
 }
