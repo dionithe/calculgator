@@ -49,6 +49,7 @@ function timer() {
 		tempsTimer --;
 		timerSuivant = setTimeout(timer, 1000);
 	} else {
+		clearTimeout(timerSuivant);
 		$("#resultat").text("Temps écoulé !");
 	}	
 }
@@ -59,19 +60,24 @@ function timer() {
 * Ajoute les eventListeners sur le bouton valider
 */
 function lancerCalcul(joueur){
+	if (typeof timerSuivant !== 'undefined') {
+		clearTimeout(timerSuivant);
+	  }
 
 	console.log(`À vous de jouer ${joueur.nom} !`);
 	let calcul = nouveauCalcul();
 
 	$("#champCalcul").text(calcul.question);
-	time = timer();
+	timer();
 
 	$("#boutonValider").click(function(){
-		validerResultat(joueur, calcul, time);
+		clearTimeout(timerSuivant);
+		validerResultat(joueur, calcul);
 	});
 	$("#champReponse").keypress(function(e){
 		if (e.keyCode == 13){
-			validerResultat(joueur, calcul, time);
+			clearTimeout(timerSuivant);
+			validerResultat(joueur, calcul);
 		}
 	});
 
@@ -111,9 +117,7 @@ function joueurSuivant(joueurActuel){
 * Prend en paramètre l'objet joueur qui doit jouer, l'objet calcul et le temps
 * Vérifie la réponse, appel la méthode ajouterScore si c'est bon, puis lance un nouveau calcul
 */
-function validerResultat(joueur, calcul, time){
-	clearTimeout(time);
-	clearTimeout(timerSuivant);
+function validerResultat(joueur, calcul){
 	$("#boutonValider").unbind();
 
 	if ($("#champReponse").val() == calcul.reponse && tempsTimer > 0){
