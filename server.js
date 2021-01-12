@@ -26,9 +26,16 @@ app.use(bodyparser.json());
 app.get('/', (req, res, next) => {
     res.render('index.ejs');
 });
-
-
-
-app.use((req, res, next)=>{
-    res.status(404).render('error.ejs');
+app.post('/', (req, res, next) => {
+    res.render('index.ejs');
 });
+
+app.get('/jeu', (req, res, next) => {
+    res.render('jeu.ejs');
+});
+
+
+
+// app.use((req, res, next)=>{
+//     res.status(404).render('error.ejs');
+// });
