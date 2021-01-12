@@ -35,3 +35,4 @@ app.post('/pagejoueurs', (req, res, next) => {
     console.log(req.body.name); 
 }); 
 
+//récupération des noms des joueurs
