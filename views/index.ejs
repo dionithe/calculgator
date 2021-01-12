@@ -1,13 +1,26 @@
 <%- include('header.ejs'); %>
 <div class="container-fluid">
-    <div class="row">
-        <img src="https://i.pinimg.com/originals/5b/a6/9e/5ba69ef5b6ab1001bf9d441f2decb412.gif"/>
+    <div class="blocJeu" style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+        <div class="row justify-content-center">
+            <img src="https://i.pinimg.com/originals/5b/a6/9e/5ba69ef5b6ab1001bf9d441f2decb412.gif"/>
+        </div>
+        <div class="row justify-content-center">
+            <h1 style="color: green;">CALCULGATOR</h1>
+        </div>
+        <div class="row justify-content-center">
+            <input type="submit" value="COMMENCER" style="background-color: white; border: solid green 4px; color: green; border-radius: 5px;">
+        </div>
     </div>
-    <div class="row">
-        <h1>CALCULGATOR</h1>
-    </div>
-    <div class="row">
-        <input type="submit" />
+
+    <!-- Règles du jeu -->
+    <div class="regles" style="height: 100vh; width: 20vw; position: absolute; right: 0; top: 0; background-color: green; border-radius: 25px 0 0 25px;">
+        <div class="row" style="color: white; padding: 5vh;">
+            <h2>Setup de la partie</h2>
+            <p>Choisissez le nombre de joueurs et inscrivez leur nom, ensuite cliquez sur jouer</p>
+            <h2>Déroulement de la partie</h2>
+            <p>Le nom du joueur qui doit jouer est affiché en haut de la page, il doit résoudre le calcul et entrer sa réponse dans </p>
+        </div>
     </div>
 </div>
+
 <%- include('footer.ejs'); %>
