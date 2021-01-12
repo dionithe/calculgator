@@ -32,6 +32,6 @@ app.post('/', (req, res, next) => {
 
 
 
-app.use((req, res, next)=>{
-    res.status(404).render('error.ejs');
-});
+// app.use((req, res, next)=>{
+//     res.status(404).render('error.ejs');
+// });
