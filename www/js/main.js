@@ -64,7 +64,7 @@ function lancerCalcul(joueur){
 		clearTimeout(timerSuivant);
 	  }
 
-	console.log(`À vous de jouer ${joueur.nom} !`);
+	$("#currentJoueur").text(`À vous de jouer ${joueur.nom} !`);
 	let calcul = nouveauCalcul();
 
 	$("#champCalcul").text(calcul.question);
@@ -123,6 +123,7 @@ function validerResultat(joueur, calcul){
 	if ($("#champReponse").val() == calcul.reponse && tempsTimer > 0){
 		joueur.ajouterScore(Math.round(tempsTimer));
 		$("#resultat").text("Bon !");
+		actualiserPodium();
 	} else {
 		$("#resultat").text("Faux !");
 	}
