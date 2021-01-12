@@ -30,6 +30,10 @@ app.post('/', (req, res, next) => {
     res.render('index.ejs');
 });
 
+app.get('/jeu', (req, res, next) => {
+    res.render('jeu.ejs');
+});
+
 
 
 // app.use((req, res, next)=>{
