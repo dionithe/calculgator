@@ -11,6 +11,6 @@ $( document).ready(function(){
     });
 
     $("#jouer").click(function(){
-        window.location.href = "/";
+        window.location.href = "/jeu";
     });
 });
