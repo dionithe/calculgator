@@ -30,4 +30,16 @@
 
 		</div>
 	</div>
+	<p><%=listeNomsJoueurs%></p>
+	<script>
+		let listeNomJoueurs = '<%- JSON.stringify(listeNomsJoueurs) %>';
+		listeNomJoueurs = JSON.parse(listeNomJoueurs);
+		let listeNomJoueursArray = listeNomJoueurs.split(',');
+		console.log(listeNomJoueursArray);
+		for (const joueur of listeNomJoueursArray) {
+			ajouterJoueur(joueur);
+		}
+	  </script>
+<script src="js/main.js"></script>
+<script src="js/podium.js"></script>
 <%- include('footer.ejs'); %>

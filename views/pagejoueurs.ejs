@@ -1,0 +1,21 @@
+<%- include ('header'); %>
+
+<h1> Inscription des joueurs  </h1> <hr>
+
+<div class="container">
+    <div class="row text-center">
+        <form action="/pagejoueurs" method="post" id="page" class="row flex-column ">
+            <div id="espace">
+                <input type="text" class="name" name="name" required minlength="1" maxlength="30" size="10" placeholder="Joueur">
+            </div>
+            <hr>
+            <button type="button" id="bouton" class="btn btn-info ">Ajouter des joueurs</button>
+            <hr>
+            <input type="hidden" value="" name="listeNomsJoueursVariable" id="listeNomsJoueursVariable">
+            <input type="hidden" name="listeNomJoueurs" id="listeNomJoueurs" value=""/>
+            <button type="submit" id="jouer" class="btn btn-success">Jouer</button>
+        </form>
+    </div>
+</div>
+<script src="js/ajoutJoueurs.js"></script>
+<%- include ('footer'); %>
