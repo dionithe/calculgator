@@ -143,7 +143,9 @@ function validerResultat(joueur, calcul){
 				,2000);
 }
 
-
+function finDeLaPartie(){
+	$("#champReponse").val('Vous avez terminé la partie. Bravo !');
+}
 let tempsTimer = 15;
 let nbTours = 5;
 // var test2 = '<%- JSON.stringify(listeNomsJoueurs) %>'; 
