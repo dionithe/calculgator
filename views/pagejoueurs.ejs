@@ -11,15 +11,11 @@
             <hr>
             <button type="button" id="bouton" class="btn btn-info ">Ajouter des joueurs</button>
             <hr>
+            <input type="hidden" value="" name="listeNomsJoueursVariable" id="listeNomsJoueursVariable">
             <input type="hidden" name="listeNomJoueurs" id="listeNomJoueurs" value=""/>
-            <button type="button" id="jouer" class="btn btn-success">Jouer</button>
+            <button type="submit" id="jouer" class="btn btn-success">Jouer</button>
         </form>
     </div>
 </div>
-<p><%=test%></p>
-<script>
-    var test = '<%- JSON.stringify(test) %>'; // test is now a valid js object
-    console.log(test);
-  </script>
 <script src="js/ajoutJoueurs.js"></script>
 <%- include ('footer'); %>

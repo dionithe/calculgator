@@ -1,17 +1,15 @@
-
-    $( document).ready(function(){
-    var listeNomsJoueurs = [];
+$( document).ready(function(){
+    let listeNomsJoueurs = [];
 
     $("#bouton").click(function(){
-        listeNomsJoueurs["nom"+nbrNoms] = $(".name").last().val();
-        console.log(listeNomsJoueurs);
-        nbrNoms++;
+        listeNomsJoueurs.push($(".name").last().val());
 
         $(".name").last().prop('disabled', true);
-        $("#espace").append('<input type="text" class="name" name="name" required minlength="1" maxlength="30" size="10" placeholder="Joueur"></form>');
+        $("#listeNomsJoueursVariable").val(listeNomsJoueurs);
+        $("#espace").append('<input type="text" class="name" name="name" minlength="1" maxlength="30" size="10" placeholder="Joueur"></form>');
     });
 
     $("#jouer").click(function(){
-        window.location.href = "/jeu";
+        $.post('pagejoueurs', listeNomsJoueurs);
     });
 });
