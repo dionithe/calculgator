@@ -1,14 +1,21 @@
 <%- include('header.ejs'); %>
 
-	<div class="container">
-		<div class="row" id="tour"></div>
-		<div class="row" id="currentJoueur"></div>
-		<div class="row">
-			<p id="champCalcul"></p>
-			<input type="text" id="champReponse" placeholder="?" />
-			<button type="button" class="btn btn-primary" id="boutonValider">Valider</button>
-			<p id="resultat">...</p>
-			<p id="timer">...</p>
+	<div class="container-fluid" style="padding: 0; margin-top: 10vh;">
+		<div class="blocQuestion" style="background-color: #339966; width: 100vw; height: 50vh; color: white; display: grid; grid-template-columns: repeat(3, 33vw); justify-content: center;">
+			<div class="infosjoueur" style="display: flex; flex-direction: column; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+				<div class="row" id="tour"></div>
+				<div class="row" id="currentJoueur" style="font-size: 2vw;"></div>
+				<p id="champCalcul" style="font-size: 5vw;"></p>
+			</div>
+			<div class="infoscalcul" style="display: flex; flex-direction: column">
+				<input type="text" id="champReponse" placeholder="Ecrire la réponse ici" style="height: 30vh; padding: 2vw; font-size: 2em; display: flex;"/>
+				<button type="button" class="btn btn-dark" id="boutonValider" style="height: 20vh">Valider la réponse</button>
+			</div>
+			<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"> 
+				<p id="resultat">Temps restant</p>
+				<p id="timer" style="font-size: 10vw;">...</p>
+			</div>	
+		</div>
 		</div>
 
 		<div class="row col-12 m-5" id="podium">
