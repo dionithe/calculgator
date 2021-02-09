@@ -3,9 +3,6 @@ let bodyparser = require('body-parser');
 let app = express();
 let port = 3000;
 
-//objet contenant la liste des noms des joueurs
-let listeNomsJoueurs = {};
-
 app.listen(port, () => {
     console.log('Le serveur est en route');
     console.log(`Server listening at http://localhost:${port}`);
@@ -37,14 +34,14 @@ app.get('/jeu', (req, res, next) => {
     res.render('jeu.ejs');
 });
 app.post('/jeu', (req, res, next) => {
-    res.render('jeu.ejs');
+    res.render('jeu.ejs', {listeNomsJoueurs : listeNomsJoueurs});
 });
 
 app.get('/pagejoueurs', (req, res, next) => {
-    res.render('pagejoueurs.ejs', {listeNomsJoueurs : listeNomsJoueurs});
+    res.render('pagejoueurs.ejs');
 }); 
 // app.post('/pagejoueurs', (req, res, next) => {
-//     res.render('jeu.ejs');
+//     res.render('jeu.ejs', {huh : jij});
 // }); 
 
 //récupération des noms des joueurs

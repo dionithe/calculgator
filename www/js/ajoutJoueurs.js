@@ -1,5 +1,6 @@
-$( document).ready(function(){
-    let nbrNoms = 1;
+
+    $( document).ready(function(){
+    var listeNomsJoueurs = [];
 
     $("#bouton").click(function(){
         listeNomsJoueurs["nom"+nbrNoms] = $(".name").last().val();

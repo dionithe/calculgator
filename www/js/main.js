@@ -146,7 +146,11 @@ function validerResultat(joueur, calcul){
 
 let tempsTimer = 15;
 let nbTours = 5;
+var listeNomJoueurs = '<%- JSON.stringify(listeNomJoueurs) %>';
 console.log(listeNomJoueurs);
+for (const joueur of listeNomJoueurs) {
+	ajouterJoueur(joueur);
+}
 // ajouterJoueur("Lulu");
 // ajouterJoueur("Nathan");
 // ajouterJoueur("Valentin");

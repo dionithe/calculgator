@@ -16,5 +16,10 @@
         </form>
     </div>
 </div>
-
+<p><%=test%></p>
+<script>
+    var test = '<%- JSON.stringify(test) %>'; // test is now a valid js object
+    console.log(test);
+  </script>
+<script src="js/ajoutJoueurs.js"></script>
 <%- include ('footer'); %>
