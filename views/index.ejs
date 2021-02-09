@@ -1,3 +1,28 @@
 <%- include('header.ejs'); %>
-<p>INDEX</p>
+<div class="container-fluid">
+    <div class="blocJeu" style="height: 100vh; width: 80vw; display: flex; flex-direction: column; justify-content: center;">
+        <div class="row justify-content-center">
+            <img src="https://i.pinimg.com/originals/5b/a6/9e/5ba69ef5b6ab1001bf9d441f2decb412.gif"/>
+        </div>
+        <div class="row justify-content-center">
+            <h1 style="color: green;">CALCULGATOR</h1>
+        </div>
+    </div>
+
+    <!-- Règles du jeu -->
+    <div class="regles" style="height: 100vh; width: 20vw; position: absolute; right: 0; top: 0; background-color: green;">
+        <div class="row" style="color: white; padding: 5vh;">
+            <h2>Setup de la partie</h2>
+            <p>Choisissez le nombre de joueurs et inscrivez leur nom, ensuite cliquez sur jouer</p>
+            <h2>Déroulement de la partie</h2>
+            <p>Le nom du joueur qui doit jouer est affiché en haut de la page, il doit résoudre le calcul et entrer sa réponse dans la zone de texte pour ensuite valider sa réponse.</p>
+            <p>La partie dure 5 tours, à chaque bonne réponse le joueur gagne des points. A la fin le joueur qui à le plus de point remporte la partie</p>
+            <div class="row" style="width: 100%; display: flex; justify-content: center;">
+                <form action="pagejoueurs.ejs" method="get">
+                    <input type="button" value="COMMENCER" style="background-color: white; border: solid green 4px; color: green; font-size: 1.5em">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <%- include('footer.ejs'); %>
