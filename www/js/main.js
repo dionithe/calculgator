@@ -146,9 +146,10 @@ function validerResultat(joueur, calcul){
 
 let tempsTimer = 15;
 let nbTours = 5;
-ajouterJoueur("Lulu");
-ajouterJoueur("Nathan");
-ajouterJoueur("Valentin");
-ajouterJoueur("Truc");
-//joueurSuivant(listeJoueurs[2]);
+console.log(listeNomJoueurs);
+// ajouterJoueur("Lulu");
+// ajouterJoueur("Nathan");
+// ajouterJoueur("Valentin");
+// ajouterJoueur("Truc");
+// joueurSuivant(listeJoueurs[2]);
 lancerCalcul(joueurSuivant());
