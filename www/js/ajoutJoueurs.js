@@ -1,9 +1,10 @@
 $( document).ready(function(){
-    let nbrNoms = 1;
+    let nbrNoms = 0;
+    let listeJoueurs = [];
 
     $("#bouton").click(function(){
-        listeNomsJoueurs["nom"+nbrNoms] = $(".name").last().val();
-        console.log(listeNomsJoueurs);
+        listeJoueurs[nbrNoms] = $(".name").last().val();
+        console.log(listeJoueurs);
         nbrNoms++;
 
         $(".name").last().prop('disabled', true);
