@@ -43,10 +43,8 @@ app.get('/pagejoueurs', (req, res, next) => {
     res.render('pagejoueurs.ejs');
 }); 
 app.post('/pagejoueurs', (req, res, next) => {
-    console.log(req.body);
     listeNomsJoueursVariable = req.body.listeNomsJoueursVariable;
     res.redirect('/jeu');
-    //res.render('jeu.ejs', {listeNomsJoueurs : req.body.listeNomsJoueursVariable});
 }); 
 
 //récupération des noms des joueurs
